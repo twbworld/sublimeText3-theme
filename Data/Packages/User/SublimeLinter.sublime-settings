@@ -1,0 +1,27 @@
+// SublimeLinter Settings - User
+{
+    "lint_mode": "save",
+    "paths": {
+                "linux": [],
+                "osx": [],
+                "windows": [
+                    "D:\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts"
+                ]
+            },
+
+
+    "styles": [
+        {
+            "scope": "region.greenish markup.warning.sublime_linter",
+            "types": ["warning"]
+        },
+        {
+            "priority": 1,
+            "mark_style": "outline",
+
+            "scope": "region.redish markup.error.sublime_linter"
+        }
+    ],
+
+
+}

@@ -1,0 +1,10 @@
+{
+	"enable_auto_align": false,
+	"format_on_save": false,
+	"indent_with_space": false,
+	"php_bin": "D:/phpStudy/PHPTutorial/php/php-7.2.1-nts/php.exe",
+	"psr1": true,
+	"psr1_naming": false,
+	"psr2": true,
+	"version": 1
+}

@@ -1,0 +1,13 @@
+!.gitignore
+!.htaccess
+!/.travis.yml
+
+/Data/Cache
+/Data/Backup
+/Data/Packages/Default
+/Data/Packages/User/Package Control.cache/
+
+
+
+# 此插件过于庞大,不必加进管理
+/Data/Packages/SublimeCodeIntel

@@ -1,0 +1,23 @@
+<snippet>
+    <content><![CDATA[
+
+
+console.log(${1});${2}
+
+]]></content>
+    <tabTrigger>con</tabTrigger>
+    <scope>source.js,source.html,source.htm</scope>
+    <description>console.log()...</description>
+</snippet>
+<!--
+该代码片段将会输出"console.log();return;"
+
+CDATA里面为输出的内容;
+${1:this}为输出后光标的位置;
+${2}为输出后按tab键光标的位置;
+"con"为输出内容前你输入的提示词,按tab键输出内容;
+"source.js"表示在js文件中使用;
+"console.log()..."表示该代码片段的名称;
+
+/谭/
+ -->

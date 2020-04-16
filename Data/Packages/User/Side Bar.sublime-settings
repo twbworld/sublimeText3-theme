@@ -1,0 +1,5 @@
+{
+
+  "default_browser": "chrome",
+  "open_all_browsers": ["chrome", "firefox", "opera", "safari", "ie", "edge"],
+}

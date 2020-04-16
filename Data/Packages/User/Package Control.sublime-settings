@@ -1,0 +1,41 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"All Autocomplete",
+		"AutoFileName",
+		"Boxy Theme",
+		"BracketHighlighter",
+		"ChineseLocalizations",
+		"Clipboard Manager",
+		"ColorPicker",
+		"ConvertToUTF8",
+		"CTags",
+		"DocBlockr",
+		"Emmet",
+		"HTML-CSS-JS Prettify",
+		"IMESupport",
+		"Insert Nums",
+		"LiveReload",
+		"Package Control",
+		"phpfmt",
+		"SFTP",
+		"SideBarEnhancements",
+		"SideBarTools",
+		"SublimeCodeIntel",
+		"SublimeGit",
+		"SublimeLinter",
+		"SublimeLinter-contrib-htmlhint",
+		"SublimeLinter-csslint",
+		"SublimeLinter-jshint",
+		"SublimeLinter-php",
+		"SublimeServer",
+		"SublimeTmpl",
+		"Theme - Afterglow",
+		"Theme - Brogrammer"
+	]
+}
