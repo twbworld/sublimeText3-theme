@@ -7,7 +7,9 @@
 /Data/Packages/Default
 /Data/Packages/User/Package Control.cache/
 
-
+package-lock.json
+composer.lock
+yarn.lock
 
 # 此插件过于庞大,不必加进管理
 /Data/Packages/SublimeCodeIntel
