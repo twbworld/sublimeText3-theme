@@ -579,14 +579,13 @@
 			"buffers":
 			[
 				{
-					"contents": "![](https://www.sublimetext.com/images/logo.svg)\n\nSublime-Text-3-Theme —— *SublimeText3自定义主题及插件集*\n===============\n\n\n## 准备\n\n### 注册\n\n`菜单栏->帮助->输入注册码`注册码3选1,注册了就不需要这步;如果不注册,往后使用,将会经常遇到弹窗\n\n>如果注册码不能使用,请自行Google\n\n```\n—– BEGIN LICENSE —–\nTwitterInc\n200 User License\nEA7E-890007\n1D77F72E 390CDD93 4DCBA022 FAF60790\n61AA12C0 A37081C5 D0316412 4584D136\n94D7F7D4 95BC8C1C 527DA828 560BB037\nD1EDDD8C AE7B379F 50C9D69D B35179EF\n2FE898C4 8E4277A8 555CE714 E1FB0E43\nD5D52613 C3D12E98 BC49967F 7652EED2\n9D2D2E61 67610860 6D338B72 5CF95C69\nE36B85CC 84991F19 7575D828 470A92AB\n—— END LICENSE ——\n```\n\n```\n----- BEGIN LICENSE -----\nsgbteam\nSingle User License\nEA7E-1153259\n8891CBB9 F1513E4F 1A3405C1 A865D53F\n115F202E 7B91AB2D 0D2A40ED 352B269B\n76E84F0B CD69BFC7 59F2DFEF E267328F\n215652A3 E88F9D8F 4C38E3BA 5B2DAAE4\n969624E7 DC9CD4D5 717FB40C 1B9738CF\n20B3C4F1 E917B5B3 87C38D9C ACCE7DD8\n5F7EF854 86B9743C FADC04AA FB0DA5C0\nF913BE58 42FEA319 F954EFDD AE881E0B\n------ END LICENSE ------\n```\n\n```\n----- BEGIN LICENSE -----\neldon\nSingle User License\nEA7E-1122628\nC0360740 20724B8A 30420C09 6D7E046F\n3F5D5FBB 17EF95DA 2BA7BB27 CCB14947\n27A316BE 8BCF4BC0 252FB8FF FD97DF71\nB11A1DA9 F7119CA0 31984BB9 7D71700C\n2C728BF8 B952E5F5 B941FF64 6D7979DA\nB8EB32F8 8D415F8E F16FE657 A35381CC\n290E2905 96E81236 63D2B06D E5F01A69\n84174B79 7C467714 641A9013 94CA7162\n------ END LICENSE ------\n```\n\n`C:\\Windows\\System32\\drivers\\etc\\hosts`文件加入以下代码;禁止Sublime-Text联网\n\n>如果文件出现保存不了的情况,请自行Google解决\n\n```\n127.0.0.1   license.sublimehq.com\n127.0.0.1   45.55.255.55\n127.0.0.1   5.55.41.223\n127.0.0.1   45.55.41.223\n```\n\n\n\n### 安装 `Package Control`\n\n> Sublime-Test插件的安装需要用到 `Package Control`\n\n按 <code>Ctrl + \\`</code> 输入：\n\n```\nimport urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)\n```\n\n> 成功安装后,需要调用 `Package Control` 进行插件的安装或卸载等操作,按 `Ctrl + shift + P`\n\n\n\n\n\n\n## 使用\n\n### 插件集成\n\n| 插件名 | 效果 | 快捷键 |\n| ---- | ---- | ---- |\n| [`Theme-Afterglow`](#Afterglow) / `Theme-Soda/boxy` | SublimeText主题 | |\n| [`brogrammer-theme`](#brogrammer) / `Theme-Default`  | 配色 | |\n| `Emmet `                          | HTML代码快速花式输入 | |\n| [`HTML-CSS-JS Prettify`](#Prettify)            | 自动排版代码 | `C+S H` |\n| [`phpfmt`](#phpfmt)                          | 自动排版PHP代码 | `C+F11` |\n| [`SublimeLinter`](#SublimeLinter)                   | html/css/js/php错误提示 | |\n| `BracketHighlighter`              | 匹配的括号高亮 | |\n| [`ColorPicker`](#ColorPicker&&ConvertToUTF8)                     | 颜色选择板 | `C+S C` |\n| [`ConvertToUTF8`](#ColorPicker&&ConvertToUTF8)                   | 解决中文乱码 | |\n| `IMESupport`                      | 输入法框跟随光标 | |\n| `SublimeServer`                   | 本地项目做服务器 | |\n| `SideBarEnhancements`             | 增强侧栏文件右键功能,浏览器预览 | `f1` / `f2` |\n| `SideBarFolders`                  | 增强顶部folders菜单 | |\n| `Alignment`                       | 所选代码自动对齐(与QQ截图键冲突) | `C+A A` |\n| `InsertNums`                      | 数字递增 | `C+A N` |\n| `SublimeTmpl`                     | 快速新建html/css/js/php文件 | `C+A H/C/J/P` |\n| `DocBlockr`                       | 函数头备注 | `\"/**\" + Enter` |\n| `AutoFileName`                    | 提示链接文件路径 | |\n| `AllAutocomplete`                 | 搜索所有打开的文件来寻找匹配的提示词 | |\n| `SublimeCodeIntel`                | js/php等多语言代码自动补全(此插件占用过大,请自行安装) | |\n| `CTags`                           | 提示函数所处的文件路径,点击跳转         | 光标浮函数上 |\n| `Clipboard Manager`               | 调出历史复制面板/粘贴上上次复制的内容    | `C+A/S V` |\n| [`SFTP`](#SFTP)                            | 快速上传项目到服务器 |  |\n| [`SublimeGit`](#SublimeGit)                      | Git操作 | `C+S P` |\n| `LiveReload`                      | 实时更新文件(配合chrome插件LiveReload) | |\n\n\n### 插件使用\n\n* Sublime配置 :\n    > `菜单栏->首选项->设置` 编辑右侧的用户设置文件\n\n* Sublime代码片段功能(别名功能);输入关键字即可快速输出定义的代码内容 :\n    > `菜单=>工具=>插件开发=>新建代码片段` 方法自行google  \n    > 参考 `Data/Packages/User/MyCode/var_dump.sublime-snippet`\n\n* <span id=\"Afterglow\"> Sublime主题自定义( `Afterglow-magenta` 主题为例) : </span>\n    > 编辑文件 `Data/Installed Packages/Theme - Afterglow.sublime-package.zip(此文件自行加上.zip后缀,编辑后恢复)/Afterglow-magenta.sublime-theme`\n\n* <span id=\"brogrammer\">Sublime配色自定义( `brogrammer` 配色为例) : </span>\n    > 编辑文件 `Data/Packages/User/SublimeLinter/brogrammer (SL).tmTheme`\n\n* <span id=\"SublimeGit\"> `SublimeGit` 插件 : </span>\n    > 插件需要依赖Git;配置的默认安装目录为 `D:\\Git\\cmd\\git.exe`  \n    > Git安装 <https://git-scm.com/downloads>\n\n* <span id=\"Prettify\"> `SublimeLinter` 和 `HTML-CSS-JS Prettify` 插件 : </span>\n    > 插件需要依赖node.js;配置的默认安装目录为 `D:\\nodejs\\node.exe`  \n    > node.js安装 <https://nodejs.org/zh-cn/download>\n\n* <span id=\"phpfmt\"> `SublimeLinter` 和 `phpfmt` 插件 : </span>\n    > 插件需要依赖PHP;配置的默认安装目录为 `D:/phpStudy/PHPTutorial/php/php-7.2.1-nts/php.exe` (这里以phpStudy的PHP7.2.1的路径为例,要PHP7.0以上)\n\n* <span id=\"SublimeLinter\"> `SublimeLinter` 插件 : </span>\n    > 需要依赖node.js  \n    > PHP 错误提示功能需改配置文件的php.exe路径  \n    > HTML/CSS/JS 错误提示功能需cmd执行命令 `npm install -g xg-htmlhint && npm install -g csslint && npm install -g jshint`\n\n* <span id=\"ColorPicker&&ConvertToUTF8\"> `ColorPicker` 和 `ConvertToUTF8` 插件 : </span>\n    > `ColorPicker` 和 `ConvertToUTF8` 的快捷键 `C+S C` 可能冲突,修改文件 `Data/Packages/ConvertToUTF8/Default (Windows).sublime-keymap`\n\n* <span id=\"SFTP\"> `SFTP` 插件 : </span>\n\n    > 安装 <https://www.jianshu.com/p/8e557deee70a>\n\n    > 快捷键 <https://blog.csdn.net/hdfqq188816190/article/details/76691383>\n    \n    > 步骤 :\n    > 1. 在Sublime打开整个项目\n    > 2. 在随意项目文件夹或文件(建议在最父级的文件夹)右键,选择点击 `SFTP/FTP => Map to remote...`\n    > 3. 在该文件夹下自动生成 `sftp-config.json` 文件,输入ftp相关信息,保存\n        ``` json\n        {\n            \"type\": \"ftp\",                  //ftp或sftp(这个一定要写对)\n            \"save_before_upload\": true,     //上传前自动保存\n            \"upload_on_save\": false,        //保存后自动上传\n            \"sync_down_on_open\": false,     //开启时同步远端到本地\n            \"sync_skip_deletes\": false,     //同步时跳过删除的文件\n            \"confirm_downloads\": false,     //开启「下载确认」\n            \"confirm_sync\": true,           //开启「同步确认」\n            \"confirm_overwrite_newer\": false, //开启「覆盖确认」\n            \"host\": \"xxx.xxx.com\",          //FTP登录主机地址\n            \"user\": \"xxxxxxxx\",             //FTP登录用户名\n            \"password\": \"xxxxxxxx\",         //FTP登录密码\n            \"port\": \"21\",                   //端口号(type为ftp为21,type为sftp时为22)\n            \"remote_path\": \"/public_html/\", //远端文件夹路径(路径一定要填写正确,如您要在本地目录为\"/public_html/twb/\"下进行,应该写\"/public_html/twb/\")\n            \"ignore_regexes\": [             //忽略的文件或文件夹\n                \"\\.sublime-(project|workspace)\",\n                \"sftp-config(-Alt\\d?)?\\.json\",\n                \"sftp-settings\\.json\",\n                \"/venv/\",\n                \"\\.svn\",\n                \"\\.hg\",\n                \"\\.git\",\n                \"\\.bzr\",\n                \"_darcs\",\n                \"CVS\",\n                \"\\.DS_Store\",\n                \"Thumbs\\.db\",\n                \"desktop\\.ini\"\n            ]\n        }\n        ```\n        一般只需填写 `type` `host` `user` `password` `remote_path` 其他默认\n    > 4. 在要处理的文件或文件夹处右键,选项 `SFTP/FTP` 中可选择 `Upload File` / `Download File` 等操作;或者可用快捷键操作,上传 `C+A u+F` 下载 `C+A u+o` 对比变化 `C+A u+i` 等等\n\n",
+					"contents": "![](https://www.sublimetext.com/images/logo.svg)\n\nSublime-Text-3-Theme —— *SublimeText3自定义主题及插件集*\n===============\n\n[![](https://img.shields.io/github/release/twbworld/Sublime-Text-3-Theme)](https://github.com/twbworld/Sublime-Text-3-Theme)\n[![](https://img.shields.io/badge/fork-Sublime_Text_3-yellow)](https://www.sublimetext.com/3)\n\n## 准备\n\n### 注册\n\n`菜单栏->帮助->输入注册码`注册码3选1,注册了就不需要这步;如果不注册,往后使用,将会经常遇到弹窗\n\n>如果注册码不能使用,请自行Google\n\n```\n—– BEGIN LICENSE —–\nTwitterInc\n200 User License\nEA7E-890007\n1D77F72E 390CDD93 4DCBA022 FAF60790\n61AA12C0 A37081C5 D0316412 4584D136\n94D7F7D4 95BC8C1C 527DA828 560BB037\nD1EDDD8C AE7B379F 50C9D69D B35179EF\n2FE898C4 8E4277A8 555CE714 E1FB0E43\nD5D52613 C3D12E98 BC49967F 7652EED2\n9D2D2E61 67610860 6D338B72 5CF95C69\nE36B85CC 84991F19 7575D828 470A92AB\n—— END LICENSE ——\n```\n\n```\n----- BEGIN LICENSE -----\nsgbteam\nSingle User License\nEA7E-1153259\n8891CBB9 F1513E4F 1A3405C1 A865D53F\n115F202E 7B91AB2D 0D2A40ED 352B269B\n76E84F0B CD69BFC7 59F2DFEF E267328F\n215652A3 E88F9D8F 4C38E3BA 5B2DAAE4\n969624E7 DC9CD4D5 717FB40C 1B9738CF\n20B3C4F1 E917B5B3 87C38D9C ACCE7DD8\n5F7EF854 86B9743C FADC04AA FB0DA5C0\nF913BE58 42FEA319 F954EFDD AE881E0B\n------ END LICENSE ------\n```\n\n```\n----- BEGIN LICENSE -----\neldon\nSingle User License\nEA7E-1122628\nC0360740 20724B8A 30420C09 6D7E046F\n3F5D5FBB 17EF95DA 2BA7BB27 CCB14947\n27A316BE 8BCF4BC0 252FB8FF FD97DF71\nB11A1DA9 F7119CA0 31984BB9 7D71700C\n2C728BF8 B952E5F5 B941FF64 6D7979DA\nB8EB32F8 8D415F8E F16FE657 A35381CC\n290E2905 96E81236 63D2B06D E5F01A69\n84174B79 7C467714 641A9013 94CA7162\n------ END LICENSE ------\n```\n\n`C:\\Windows\\System32\\drivers\\etc\\hosts`文件加入以下代码;禁止Sublime-Text联网\n\n>如果文件出现保存不了的情况,请自行Google解决\n\n```\n127.0.0.1   license.sublimehq.com\n127.0.0.1   45.55.255.55\n127.0.0.1   5.55.41.223\n127.0.0.1   45.55.41.223\n```\n\n\n\n### 安装 `Package Control`\n\n> Sublime-Test插件的安装需要用到 `Package Control`\n\n按 <code>Ctrl + \\`</code> 输入：\n\n```\nimport urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)\n```\n\n> 成功安装后,需要调用 `Package Control` 进行插件的安装或卸载等操作,按 `Ctrl + shift + P`\n\n\n\n\n\n\n## 使用\n\n### 插件集成\n\n| 插件名 | 效果 | 快捷键 |\n| ---- | ---- | ---- |\n| [`Theme-Afterglow`](#Afterglow) / `Theme-Soda/boxy` | SublimeText主题 | |\n| [`brogrammer-theme`](#brogrammer) / `Theme-Default`  | 配色 | |\n| `Emmet `                          | HTML代码快速花式输入 | |\n| [`HTML-CSS-JS Prettify`](#Prettify)            | 自动排版代码 | `C+S H` |\n| [`phpfmt`](#phpfmt)                          | 自动排版PHP代码 | `C+F11` |\n| [`SublimeLinter`](#SublimeLinter)                   | html/css/js/php错误提示 | |\n| `BracketHighlighter`              | 匹配的括号高亮 | |\n| [`ColorPicker`](#ColorPicker&&ConvertToUTF8)                     | 颜色选择板 | `C+S C` |\n| [`ConvertToUTF8`](#ColorPicker&&ConvertToUTF8)                   | 解决中文乱码 | |\n| `IMESupport`                      | 输入法框跟随光标 | |\n| `SublimeServer`                   | 本地项目做服务器 | |\n| `SideBarEnhancements`             | 增强侧栏文件右键功能,浏览器预览 | `f1` / `f2` |\n| `SideBarFolders`                  | 增强顶部folders菜单 | |\n| `Alignment`                       | 所选代码自动对齐(与QQ截图键冲突) | `C+A A` |\n| `InsertNums`                      | 数字递增 | `C+A N` |\n| `SublimeTmpl`                     | 快速新建html/css/js/php文件 | `C+A H/C/J/P` |\n| `DocBlockr`                       | 函数头备注 | `\"/**\" + Enter` |\n| `AutoFileName`                    | 提示链接文件路径 | |\n| `AllAutocomplete`                 | 搜索所有打开的文件来寻找匹配的提示词 | |\n| `SublimeCodeIntel`                | js/php等多语言代码自动补全,占用大可卸载 | |\n| `CTags`                           | 提示函数所处的文件路径,点击跳转         | 光标浮函数上 |\n| `Clipboard Manager`               | 调出历史复制面板/粘贴上上次复制的内容    | `C+A/S V` |\n| [`SFTP`](#SFTP)                            | 快速上传项目到服务器 |  |\n| [`SublimeGit`](#SublimeGit)                      | Git操作 | `C+S P` |\n| `LiveReload`                      | 实时更新文件(配合chrome插件LiveReload) | |\n\n\n### 插件使用\n\n* Sublime配置 :\n    > `菜单栏->首选项->设置` 编辑右侧的用户设置文件\n\n* Sublime代码片段功能(别名功能);输入关键字即可快速输出定义的代码内容 :\n    > `菜单=>工具=>插件开发=>新建代码片段` 方法自行google  \n    > 参考 `Data/Packages/User/MyCode/var_dump.sublime-snippet`\n\n* <span id=\"Afterglow\"> Sublime主题自定义( `Afterglow-magenta` 主题为例) : </span>\n    > 编辑文件 `Data/Installed Packages/Theme - Afterglow.sublime-package.zip(此文件自行加上.zip后缀,编辑后恢复)/Afterglow-magenta.sublime-theme`\n\n* <span id=\"brogrammer\">Sublime配色自定义( `brogrammer` 配色为例) : </span>\n    > 编辑文件 `Data/Packages/User/SublimeLinter/brogrammer (SL).tmTheme`\n\n* <span id=\"SublimeGit\"> `SublimeGit` 插件 : </span>\n    > 插件需要依赖Git;配置的默认安装目录为 `D:\\Git\\cmd\\git.exe`  \n    > Git安装 <https://git-scm.com/downloads>\n\n* <span id=\"Prettify\"> `SublimeLinter` 和 `HTML-CSS-JS Prettify` 插件 : </span>\n    > 插件需要依赖node.js;配置的默认安装目录为 `D:\\nodejs\\node.exe`  \n    > node.js安装 <https://nodejs.org/zh-cn/download>\n\n* <span id=\"phpfmt\"> `SublimeLinter` 和 `phpfmt` 插件 : </span>\n    > 插件需要依赖PHP;配置的默认安装目录为 `D:/phpStudy/PHPTutorial/php/php-7.2.1-nts/php.exe` (这里以phpStudy的PHP7.2.1的路径为例,要PHP7.0以上)\n\n* <span id=\"SublimeLinter\"> `SublimeLinter` 插件 : </span>\n    > 需要依赖node.js  \n    > PHP 错误提示功能需改配置文件的php.exe路径  \n    > HTML/CSS/JS 错误提示功能需cmd执行命令 `npm install -g xg-htmlhint && npm install -g csslint && npm install -g jshint`\n\n* <span id=\"ColorPicker&&ConvertToUTF8\"> `ColorPicker` 和 `ConvertToUTF8` 插件 : </span>\n    > `ColorPicker` 和 `ConvertToUTF8` 的快捷键 `C+S C` 可能冲突,修改文件 `Data/Packages/ConvertToUTF8/Default (Windows).sublime-keymap`\n\n* <span id=\"SFTP\"> `SFTP` 插件 : </span>\n\n    > 安装 <https://www.jianshu.com/p/8e557deee70a>\n\n    > 快捷键 <https://blog.csdn.net/hdfqq188816190/article/details/76691383>\n    \n    > 步骤 :\n    > 1. 在Sublime打开整个项目\n    > 2. 在随意项目文件夹或文件(建议在最父级的文件夹)右键,选择点击 `SFTP/FTP => Map to remote...`\n    > 3. 在该文件夹下自动生成 `sftp-config.json` 文件,输入ftp相关信息,保存\n        ``` json\n        {\n            \"type\": \"ftp\",                  //ftp或sftp(这个一定要写对)\n            \"save_before_upload\": true,     //上传前自动保存\n            \"upload_on_save\": false,        //保存后自动上传\n            \"sync_down_on_open\": false,     //开启时同步远端到本地\n            \"sync_skip_deletes\": false,     //同步时跳过删除的文件\n            \"confirm_downloads\": false,     //开启「下载确认」\n            \"confirm_sync\": true,           //开启「同步确认」\n            \"confirm_overwrite_newer\": false, //开启「覆盖确认」\n            \"host\": \"xxx.xxx.com\",          //FTP登录主机地址\n            \"user\": \"xxxxxxxx\",             //FTP登录用户名\n            \"password\": \"xxxxxxxx\",         //FTP登录密码\n            \"port\": \"21\",                   //端口号(type为ftp为21,type为sftp时为22)\n            \"remote_path\": \"/public_html/\", //远端文件夹路径(路径一定要填写正确,如您要在本地目录为\"/public_html/twb/\"下进行,应该写\"/public_html/twb/\")\n            \"ignore_regexes\": [             //忽略的文件或文件夹\n                \"\\.sublime-(project|workspace)\",\n                \"sftp-config(-Alt\\d?)?\\.json\",\n                \"sftp-settings\\.json\",\n                \"/venv/\",\n                \"\\.svn\",\n                \"\\.hg\",\n                \"\\.git\",\n                \"\\.bzr\",\n                \"_darcs\",\n                \"CVS\",\n                \"\\.DS_Store\",\n                \"Thumbs\\.db\",\n                \"desktop\\.ini\"\n            ]\n        }\n        ```\n        一般只需填写 `type` `host` `user` `password` `remote_path` 其他默认\n    > 4. 在要处理的文件或文件夹处右键,选项 `SFTP/FTP` 中可选择 `Upload File` / `Download File` 等操作;或者可用快捷键操作,上传 `C+A u+F` 下载 `C+A u+o` 对比变化 `C+A u+i` 等等\n\n",
 					"file": "/E/sublime_Text3/Sublime使用.md",
 					"file_size": 9323,
 					"file_write_time": 132315791141523414,
 					"settings":
 					{
-						"buffer_size": 7409,
-						"encoding": "UTF-8",
+						"buffer_size": 7620,
 						"line_ending": "Windows"
 					}
 				}
@@ -604,7 +603,7 @@
 				[
 					[
 						"Package Control: ",
-						"Package Control: Install Package"
+						"Package Control: Upgrade Package"
 					],
 					[
 						"Package Control: up",
@@ -656,6 +655,11 @@
 			},
 			"file_history":
 			[
+				"/X/git/sublimeText3/Data/Packages/User/Default.sublime-keymap",
+				"/X/git/sublimeText3/README.md",
+				"/X/git/sublimeText3/Data/Packages/User/ConvertToUTF8.sublime-settings",
+				"/X/git/sublimeText3/Data/Packages/ConvertToUTF8/ConvertToUTF8.sublime-settings",
+				"/X/git/sublimeText3/Data/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
 				"/C/Users/11748/Desktop/Sublime_Text3使用.txt",
 				"/D/phpStudy/PHPTutorial/WWW/Git/Sublime_Text3/Sublime_Text3使用.txt",
 				"/D/phpStudy/PHPTutorial/WWW/Git/Sublime_Text3/Data/Packages/User/LiveReload.sublime-settings",
@@ -778,12 +782,7 @@
 				"/D/Sublime_Text3/Data/Packages/SideBarEnhancements/Side Bar.sublime-settings",
 				"/D/Sublime_Text3/Data/Packages/User/Side Bar.sublime-settings",
 				"/C/Users/Administrator/Desktop/新建文本文档.txt",
-				"/D/Sublime_Text3/Data/Packages/User/CTags.sublime-settings",
-				"/D/phpStudy/WWW/twb/twb/Home/View/Index/index.html",
-				"/D/Sublime_Text3/sftp-config.json",
-				"/D/Sublime_Text3/Data/Packages/phpfmt/phpfmt.sublime-settings",
-				"/C/Users/twb/Desktop/hosts",
-				"/D/Sublime_Text3/Data/Packages/User/SublimeServer.sublime-settings"
+				"/D/Sublime_Text3/Data/Packages/User/CTags.sublime-settings"
 			],
 			"find":
 			{
@@ -960,19 +959,22 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 7409,
+								"buffer_size": 7620,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										48,
-										48
+										19,
+										19
 									]
 								],
 								"settings":
 								{
+									"SL.13.region_keys":
+									[
+									],
 									"SL.17.region_keys":
 									[
 									],
@@ -995,56 +997,56 @@
 									},
 									"bracket_highlighter.clone_regions":
 									[
-										"bh_curly",
-										"bh_curly_center",
-										"bh_curly_open",
-										"bh_curly_close",
-										"bh_curly_content",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_default_content",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_double_quote_content",
-										"bh_unmatched",
-										"bh_unmatched_center",
-										"bh_unmatched_open",
-										"bh_unmatched_close",
-										"bh_unmatched_content",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close",
-										"bh_single_quote_content",
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_regex_content",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_round_content",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_square_content",
 										"bh_angle",
 										"bh_angle_center",
 										"bh_angle_open",
 										"bh_angle_close",
 										"bh_angle_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
 										"bh_tag",
 										"bh_tag_center",
 										"bh_tag_open",
 										"bh_tag_close",
-										"bh_tag_content"
+										"bh_tag_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content"
 									],
 									"bracket_highlighter.locations":
 									{
@@ -1083,46 +1085,46 @@
 										"bh_curly_open",
 										"bh_curly_close",
 										"bh_curly_content",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_default_content",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_double_quote_content",
 										"bh_unmatched",
 										"bh_unmatched_center",
 										"bh_unmatched_open",
 										"bh_unmatched_close",
 										"bh_unmatched_content",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close",
-										"bh_single_quote_content",
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_regex_content",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_round_content",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_square_content",
 										"bh_angle",
 										"bh_angle_center",
 										"bh_angle_open",
 										"bh_angle_close",
 										"bh_angle_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content",
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
 										"bh_tag",
 										"bh_tag_center",
 										"bh_tag_open",
@@ -1130,6 +1132,7 @@
 										"bh_tag_content"
 									],
 									"incomplete_sync": null,
+									"is_init_dirty_state": true,
 									"remote_loading": false,
 									"synced": false,
 									"syntax": "Packages/Markdown/Markdown.sublime-syntax",
@@ -1198,7 +1201,7 @@
 				"height": 146.0
 			},
 			"pinned_build_system": "",
-			"position": "0,2,3,-32000,-32000,-1,-1,1044,37,364,1127",
+			"position": "0,2,3,-1,-1,-1,-1,614,47,60,1212",
 			"project": "",
 			"replace":
 			{
