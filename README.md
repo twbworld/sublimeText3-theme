@@ -3,7 +3,7 @@
 Sublime-Text-3-Theme —— *SublimeText3自定义主题及插件集*
 ===============
 
-[![](https://img.shields.io/github/release/twbworld/Sublime-Text-3-Theme)](https://github.com/twbworld/Sublime-Text-3-Theme)
+[![](https://img.shields.io/github/tag/twbworld/Sublime-Text-3-Theme)](https://github.com/twbworld/Sublime-Text-3-Theme)
 [![](https://img.shields.io/badge/fork-Sublime_Text_3-yellow)](https://www.sublimetext.com/3)
 
 ## 准备
