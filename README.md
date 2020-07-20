@@ -3,7 +3,7 @@
 Sublime-Text-3-Theme —— *SublimeText3自定义主题及插件集*
 ===============
 
-[![](https://img.shields.io/github/tag/twbworld/Sublime-Text-3-Theme)](https://github.com/twbworld/Sublime-Text-3-Theme)
+[![](https://img.shields.io/github/tag/twbworld/Sublime-Text-3-Theme?logo=github)](https://github.com/twbworld/Sublime-Text-3-Theme)
 [![](https://img.shields.io/badge/fork-Sublime_Text_3-yellow)](https://www.sublimetext.com/3)
 
 ## 准备
@@ -123,6 +123,7 @@ import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe0
 | [`SFTP`](#SFTP)                            | 快速上传项目到服务器 |  |
 | [`SublimeGit`](#SublimeGit)                      | Git操作 | `C+S P` |
 | `LiveReload`                      | 实时更新文件(配合chrome插件LiveReload) | |
+| `editorconfig`                      | 编辑器规范 | |
 
 
 ### 插件使用
