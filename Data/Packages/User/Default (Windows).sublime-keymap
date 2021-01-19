@@ -1,0 +1,24 @@
+[
+    { "keys": ["ctrl+x"], "command": "clipboard_manager_cut" },
+    { "keys": ["ctrl+c"], "command": "clipboard_manager_copy" },
+    { "keys": ["ctrl+v"], "command": "clipboard_manager_paste", "args": { "indent": true } },
+    { "keys": ["ctrl+alt+shift+v"], "command": "clipboard_manager_next_and_paste" },
+    { "keys": ["ctrl+shift+v"], "command": "clipboard_manager_previous_and_paste" },
+    { "keys": ["ctrl+alt+v"], "command": "clipboard_manager_choose_and_paste" },
+
+    { "keys": ["f1"], "command": "copy_path" },
+        { "keys": ["f1"], "command": "side_bar_files_open_with",
+            "args": {
+                "paths": [],
+                "application": "D:/360/360Chrome/Chrome/Application/360chrome.exe",
+                "extensions":".*" //匹配任何文件类型
+            }
+        },
+        { "keys": ["f2"], "command": "side_bar_files_open_with",
+            "args": {
+                "paths": [],
+                "application": "D:/Firefox/firefox.exe",
+                "extensions":".*"
+            }
+         },
+]

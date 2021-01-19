@@ -1,0 +1,33 @@
+{
+	"always_show_minimap_viewport": true,
+	"auto_find_in_selection": true,
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/User/SublimeLinter/brogrammer (SL).tmTheme",
+	"draw_minimap_border": true,
+	"enable_tab_scrolling": false,
+	"fade_fold_buttons": false,
+	"fallback_encoding": "UTF-8",
+	"font_face": "Microsoft YaHei Mono",
+	"font_size": 11,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_top": 0,
+	"rulers":
+	[
+		80
+	],
+	"save_on_focus_lost": true,
+	"scroll_past_end": true,
+	"show_encoding": true,
+	"show_full_path": true,
+	"spell_check": false,
+	"tab_size": 4,
+	"theme": "Afterglow-magenta.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": false,
+	"update_check": false,
+	"word_wrap": true
+}

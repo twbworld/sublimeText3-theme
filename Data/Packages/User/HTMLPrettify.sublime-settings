@@ -1,0 +1,8 @@
+{
+    "node_path":
+    {
+        "windows": "D:/nodejs/node.exe",
+        "linux": "/usr/bin/nodejs",
+        "osx": "/usr/local/bin/node"
+    },
+}

@@ -1,0 +1,23 @@
+<snippet>
+    <content><![CDATA[
+
+
+var_dump(${1});exit();${2}
+
+]]></content>
+    <tabTrigger>var</tabTrigger>
+    <scope>source.php,test.html,test.htm</scope>
+    <description>var_d...</description>
+</snippet>
+<!--
+该代码片段将会输出"var_dump();exit();"
+
+CDATA里面为输出的内容;
+${1:this}为输出后光标的位置;
+${2}为输出后按tab键光标的位置;
+"var"为输出内容前你输入的提示词,按tab键输出内容;
+"source.php"表示在php文件中使用;
+"var_d..."表示该代码片段的名称;
+
+/谭/
+ -->

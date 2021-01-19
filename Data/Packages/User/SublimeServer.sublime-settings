@@ -1,0 +1,14 @@
+{
+	"attempts": 3,
+	"autorun": true,
+	"defaultExtension": ".html",
+	"interval": 500,
+	"mimetypes":
+	{
+		"": "application/octet-stream",
+		".c": "text/plain",
+		".h": "text/plain",
+		".py": "text/plain"
+	},
+	"port": 8080
+}
